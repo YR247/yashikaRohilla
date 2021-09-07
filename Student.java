@@ -1,59 +1,26 @@
 package com;
 
-
 public class Student {
-	private String name;
-	private String email;
-	private String address;
-	private Integer id;
 	
-	//constructor default
-		public Student() {
-			super();
-		}
-		
-		//parameterized constructor
-		public Student(Integer id, String name, String email, String address) {
-			super();
-			this.id=id;
-			this.name=name;
-			this.email=email;
-			this.address=address;
-		}
-		
 	
-	public String getName() {
+	String getName(String name) {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
+	
+	int getRollno(int roll_no) {
+		return roll_no;
 	}
 	
+	
+	public static void main(String args[]) {
+		Student student = new Student();
+		
+		String name =student.getName("John");
+		System.out.print("Student's name is: "+name+"\n");
+		
+		int roll_no = student.getRollno(2);
+		System.out.print("Roll no of student is: "+roll_no);
+		
+	}
 
 }
-
-
-
-
-
-
-
-
